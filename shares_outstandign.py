@@ -38,4 +38,4 @@ def open_share_hist(ticker):
     with open('SharesOutstanding_{}.pickle'.format(ticker),"wb") as f:
         pickle.dump(sh_os,f)
         
-return(sh_os)
+  return(sh_os)
