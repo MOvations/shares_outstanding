@@ -43,7 +43,8 @@ def open_share_hist(ticker):
        
     with open('SharesOutstanding_{}.pickle'.format(ticker),"wb") as f:
         pickle.dump(sh_os,f)
-    
+        
+  mapping = dict(K='E3', M='E6', B='E9')  
   sh_os['SharesOut'] = pd.to_numeric(sh_os['SharesOut'].replace(mapping, regex=True))
     
   return(sh_os)
